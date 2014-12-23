@@ -85,15 +85,18 @@
 <script>
 $(document).ready(function(){
 
+	$('.slider-box').slide({
+	    container: '.img-box',
+	    item: 'li',
+	    trigger: 'li',
+	    auto: true
+	});
+
     var imgLoad = imagesLoaded( ".slide-box" );
 
     imgLoad.on("done", function(){
         $(".img-box").css("backgroundImage","none");
     })
-    // imgLoad.on( 'progress', function( instance, image ) {
-    //   var result = image.isLoaded ? 'loaded' : 'broken';
-    //   console.log( 'image is ' + result + ' for ' + image.img.src );
-    // });
 })
 </script>
 </body>

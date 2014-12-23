@@ -23,7 +23,7 @@ button, input, select, textarea, label {
     font-size: 100%; vertical-align:middle;
 }
 
-input:focus {
+input:focus, a:focus {
     outline: none;
 }
 .clearfix,
@@ -222,6 +222,12 @@ input:focus {
 	z-index: 9;
 	height: 100px;
 }
+.sub-footer{
+    margin-top: -15px;
+}
+.sub-footer .contact{
+    color: #333!important;
+}
 .footer .ft-bg{
 	position: absolute;
 	width: 100%;
@@ -253,12 +259,6 @@ input:focus {
 
 
 
-
-
-
-
-
-
 .slide-box{
   position: relative;
   width: 100%;
@@ -271,7 +271,7 @@ input:focus {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #1A1A1A url(img/small-load.gif) no-repeat center center;
+  background: #15191f url(img/small-load.gif) no-repeat center center;
   margin: 0;
   padding: 0;
 }

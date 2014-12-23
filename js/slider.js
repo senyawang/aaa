@@ -160,11 +160,4 @@ $.fn.slide = function(option){
 
 
 
-$('.slider-box').slide({
-    container: '.img-box',
-    item: 'li',
-    trigger: 'li',
-    auto: true
-});
-
 });
