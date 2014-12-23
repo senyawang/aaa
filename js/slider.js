@@ -156,7 +156,7 @@ $.fn.slide = function(option){
         triggerEvent(page);
     }
 
-  }
+}
 
 
 
