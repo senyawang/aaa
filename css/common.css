@@ -88,10 +88,10 @@ input:focus {
 	position: relative;
 	height: 61px;
 	font: 500 14px/61px microsoft yahei;
-	padding: 0 20px 0 45px;
+	padding: 0 25px 0 55px;
 
 }
-.nav-list .last .item{
+.nav-list .last{
 	background: none;
 }
 .nav-list li:hover{
@@ -103,9 +103,42 @@ input:focus {
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	left: 20px;
+	left: 30px;
 	top: 20px;
 }
+
+
+.header .logo{
+    margin-left: -93px;
+    width: 185px;
+    height: 105px;
+    background: url(img/logo-sm.png);
+}
+.hd-tel{
+    position: absolute;
+    width: 143px;
+    height: 38px;
+    left: 50%;
+    top: 63px;
+    margin-left: -400px;
+    background: url(img/tel-sm.png);
+    text-indent: -9999px;
+}
+.nav-list{
+    height: 40px;
+}
+.nav-list .item{
+    height: 40px;
+    font: 500 14px/40px microsoft yahei;
+}
+.header .nav{ height: 40px; }
+.nav-list .item i{top: 10px;}
+.header .topline{
+    height: 39px;
+    margin-bottom: 48px;
+    border-bottom: 18px solid #be1a2b;
+}
+
 .sub-item{
 	display: none;
 	position: absolute;
@@ -304,4 +337,5 @@ input:focus {
     transition: transform 8s;
 
 }
-.footter{}
+
+.
