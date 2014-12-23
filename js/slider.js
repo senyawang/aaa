@@ -1,3 +1,5 @@
+$(function () {
+
 $.fn.slide = function(option){
 
     var options = {
@@ -51,7 +53,11 @@ $.fn.slide = function(option){
 
     // });
 
+    var wh = $("body").height(),
+        hh = $(".header").height();
 
+    $item.height(wh-hh);
+    $container.height(wh-hh);
 
     triggerEvent(page);
 
@@ -152,12 +158,12 @@ $.fn.slide = function(option){
 
   }
 
-$(function () {
-  
-  $('.slider-box').slide({
-        container: '.img-box',
-        item: 'li',
-        trigger: 'li',
-        auto: true
-    });
+
+
+$('.slider-box').slide({
+    container: '.img-box',
+    item: 'li',
+    trigger: 'li',
+    auto: true
+});
 });
