@@ -116,6 +116,10 @@
 .connected-carousels .carousel-stage-comment {
   height: 400px;
 }
+.connected-carousels .carousel-stage li{
+    width: 800px;
+    text-align: center;
+}
 /** Navigation carousel specific styles **/
 .connected-carousels .carousel-navigation,
 .connected-carousels .carousel-navigation-comment {
@@ -242,4 +246,120 @@
 .connected-carousels .next-navigation-comment.inactive {
   opacity: .5;
   cursor: default;
+}
+
+
+.pro-info,
+.pro-good{
+    text-align: center;
+}
+
+.article-cont{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.news-detail{
+    padding: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+.news-detail img{
+    margin-bottom: 20px;
+}
+.news-detail h1{
+    text-align: center;
+    font: 500 28px/40px microsoft yahei;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.news-detail .date{
+    float: right;
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+.news-detail p{
+    text-align: left;
+    text-indent: 2em;
+    margin-bottom: 10px;
+}
+.news-img{
+    float: left;
+    margin-right: 20px;
+}
+.news-list{
+    margin:20px 0;
+    padding: 20px;
+    border: 1px solid #d9d9d9;
+}
+.news-cont{
+    float: left;
+    width: 47%;
+}
+.news-cont li{
+    overflow: hidden;
+    zoom: 1;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font: 500 14px/30px microsoft yahei;
+    border: 1px solid #d9d9d9;
+}
+.news-cont li a{float: left;
+    width:320px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666;}
+.news-cont .n-date{
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+.map-cont{
+    position: relative;
+    height: 824px;
+    border-top: 1px solid #d9d9d9;
+    background: url(img/map.jpg) no-repeat center top;
+}
+.contact-modal{
+    position: absolute;
+    width: 440px;
+    left: 50%;
+    top: 30px;
+    margin-left: -120px;
+    padding: 20px 20px 0;
+    border: 1px solid #c9cacf;
+    background: #fff;
+    text-align: center;
+}
+.contact-modal p{
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #666;
+}
+.contact-modal img{
+    margin-bottom: 15px;
+}
+.photo-menu{
+    width: 1000px;
+    overflow: hidden;
+    zoom: 1;
+    margin-left: 50px;
+}
+
+.photo-menu a{
+    float: left;
+    width: 210px;
+    height: 450px;
+    margin: 20px;
+    background: #ccc;
+}
+.photo-list{
+    width: 900px;
+    margin: 30px auto;
 }

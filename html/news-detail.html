@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body>
+
+<div class="header">
+	<div class="topline"></div>
+	<h1 class="logo">燕西华府</h1>
+	<span class="hd-tel">销售热线：010-82508877</span>
+	<div class="nav">
+		<div class="wrap">
+			<ul class="nav-list clearfix">
+				<li><a class="item" href="#"><i class="i1"></i>设计理念</a></li>
+				<li><a class="item" href="#"><i class="i2"></i>华府交通</a></li>
+				<li><a class="item" href="#"><i class="i3"></i>人文山水</a></li>
+				<li><a class="item" href="#"><i class="i4"></i>华府生活</a>
+					<div class="sub-item">
+						<a href="#">区域服务</a>
+						<a href="#">高端服务</a>
+						<a href="#">自有服务</a>
+					</div>
+				</li>
+				<li><a class="item" href="#"><i class="i5"></i>新品 跃墅</a></li>
+				<li><a class="item" href="#"><i class="i6"></i>产品中心</a></li>
+				<li><a class="item" href="#"><i class="i7"></i>活动快报</a></li>
+				<li class="last"><a class="item" href="#"><i class="i8"></i>联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- .nav -->
+</div>
+<!-- header -->
+
+
+<div class="content">
+	<div class="article-cont">
+		<div class="news-detail">
+			<h1>
+				【新品华府跃墅】
+				<span class="date">2014-10-11</span>
+			</h1>
+			<img src="../images/yanban.jpg" alt="">
+			<p>燕西华府聘请国际三大园林景观大师之一的户田芳树先生，亲自打造道法自然、浑然天成东方禅境园林。规划方案历经7次反复推敲，最终完成了“人、建筑与景观小品”的和谐空间关系。</p>
+			<p>东方禅境园林讲究的是一种心境和回归自然、融于自然的生活状态；感受安静、从容、平和心态，充分享受大自然的清新惬意。园区运用湖、溪等自然元素，并在在高差20米的台地园林中，保留约3500余株的原生树，其中包括银杏、元杉、紫薇等30余种珍贵树种。</p>
+			<p>园林以水为脉，引水绕宅，四纵水系汇聚中央的森林溪谷，营造出“四水归堂”的风水格局。同时，通过人工手法罕见的打造为不结冰水系，并通过生态处理手法保障水体水质，四季皆可观赏水意之美。</p>
+		</div>
+		<!-- .news-detail -->
+	</div>
+	<!-- .article-cont -->
+</div>
+<!-- content -->
+
+
+<div class="footer sub-footer">
+	<div class="ft-bg"></div>
+	<div class="wrap">
+		<div class="qrcode"></div>
+		<div class="contact">
+			服务热线：010 8256 8877<br>
+			现场地址 : 北京市丰台区王佐镇青龙湖公园东500米<br>
+			海淀售楼处地址 : 北京市海淀区万城华府玺园会所
+		</div>
+	</div>
+</div>
+
+
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/slider.js" type="text/javascript"></script>
+<script src="../js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+
+	$('.slider-box').slide({
+	    container: '.img-box',
+	    item: 'li',
+	    trigger: 'li',
+	    auto: true
+	});
+
+    var imgLoad = imagesLoaded( ".slide-box" );
+
+    imgLoad.on("done", function(){
+        $(".img-box").css("backgroundImage","none");
+    })
+})
+</script>
+</body>
+</html>
