@@ -166,4 +166,5 @@ $('.slider-box').slide({
     trigger: 'li',
     auto: true
 });
+
 });
