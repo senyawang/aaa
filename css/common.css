@@ -59,6 +59,8 @@ input:focus, a:focus {
 	height: 140px;
 	text-indent: -9999px;
 	background: url(img/logo.png);
+    border: 5px solid #fff;
+    border-width: 0 5px;
 }
 .hd-tel{
 	position: absolute;
@@ -129,6 +131,7 @@ input:focus, a:focus {
 }
 .nav-list .item{
     height: 46px;
+    color: #606061;
     font: 500 14px/46px microsoft yahei;
 }
 .header .nav{ height: 46px; }
