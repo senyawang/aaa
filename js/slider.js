@@ -56,8 +56,15 @@ $.fn.slide = function(option){
     var wh = $("body").height(),
         hh = $(".header").height();
 
-    $item.height(wh-hh);
-    $container.height(wh-hh);
+    if(wh > 800){
+        $item.height("800px");
+        $container.height("800px");
+    }else{
+        $item.height("550px");
+        $container.height("550px");
+    }
+    // $item.height(wh-hh);
+    // $container.height(wh-hh);
 
     triggerEvent(page);
 
