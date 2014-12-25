@@ -326,7 +326,7 @@
 }
 .contact-modal{
     position: absolute;
-    width: 440px;
+    width: 500px;
     left: 50%;
     top: 30px;
     margin-left: -120px;
@@ -336,14 +336,21 @@
     text-align: center;
 }
 .contact-modal p{
-    text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 26px;
-    color: #666;
+    color: #616262;
 }
 .contact-modal img{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+.contact-modal .arrow{
+    position: absolute;
+    width: 90px;
+    height: 25px;
+    left: 50px;
+    bottom: -25px;
+    background: url(img/arrow.png) no-repeat;
 }
 .photo-menu{
     width: 1000px;
