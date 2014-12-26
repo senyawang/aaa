@@ -307,6 +307,9 @@
     font: 500 14px/30px microsoft yahei;
     border: 1px solid #d9d9d9;
 }
+.news-cont li:hover{
+    border: 1px solid transparent;
+}
 .news-cont li a{float: left;
     width:320px;
     overflow: hidden;
@@ -396,4 +399,21 @@
 .photo-list{
     width: 900px;
     margin: 30px auto;
+}
+.page{
+  padding: 20px;
+  text-align: right;
+}
+.page a{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #e3e3e3;
+    font: 500 14px/20px arial;
+}
+.page .current{
+    border: 1px solid red;
+}
+.footer{
+    position: relative;
 }
