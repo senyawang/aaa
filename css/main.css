@@ -124,7 +124,7 @@
     font-size: 350px;
     text-align: center;
 }
-.connected-carousels .carousel-stage li{
+.connected-carousels .carousel-stage li img{
     vertical-align: middle;
 }
 /** Navigation carousel specific styles **/
@@ -172,11 +172,11 @@
 }
 .connected-carousels .prev-stage.inactive,
 .connected-carousels .next-stage.inactive {
-  display: none;
+  /*display: none;*/
 }
 .connected-carousels .prev-stage span,
 .connected-carousels .next-stage span {
-  display: none;
+  display: block;
   position: absolute;
   top: 50%;
   width: 30px;

@@ -56,13 +56,18 @@ $.fn.slide = function(option){
     var wh = $("body").height(),
         hh = $(".header").height();
 
-    if(wh > 800){
-        $item.height("800px");
-        $container.height("800px");
-    }else{
-        $item.height("550px");
-        $container.height("550px");
+
+    if(!$('.peitao').length){
+        if(wh > 800){
+          $item.height("800px");
+          $container.height("800px");
+      }else{
+          $item.height("550px");
+          $container.height("550px");
+      }
     }
+
+    
     // $item.height(wh-hh);
     // $container.height(wh-hh);
 
@@ -70,7 +75,8 @@ $.fn.slide = function(option){
 
     if(opts.auto){
 
-      autoSlide();
+      setTimeout(autoSlide, 5000)
+      // autoSlide();
       // $prev.hide();
       // $next.hide();
 

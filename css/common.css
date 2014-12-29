@@ -131,6 +131,7 @@ input:focus, a:focus {
 }
 .nav-list{
     height: 46px;
+    /*overflow: hidden;*/
 }
 .nav-list .item{
     height: 46px;
