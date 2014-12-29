@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="../css/common.css">
+
+</head>
+<body>
+
+<div class="header">
+	<div class="topline"></div>
+	<h1 class="logo">燕西华府</h1>
+	<span class="hd-tel">销售热线：010-82508877</span>
+	<div class="nav">
+		<div class="wrap">
+			<ul class="nav-list clearfix">
+				<li><a class="item" href="#"><i class="i1"></i>设计理念</a></li>
+				<li><a class="item" href="#"><i class="i2"></i>华府相册</a></li>
+				<li><a class="item" href="#"><i class="i3"></i>人文山水</a></li>
+				<li><a class="item" href="#"><i class="i4"></i>华府生活</a>
+					<div class="sub-item">
+						<a href="#">区域服务</a>
+						<a href="#">高端服务</a>
+						<a href="#">自有服务</a>
+					</div>
+				</li>
+				<li><a class="item" href="#"><i class="i5"></i>新品 跃墅</a></li>
+				<li><a class="item" href="#"><i class="i6"></i>产品中心</a></li>
+				<li><a class="item" href="#"><i class="i7"></i>活动快报</a></li>
+				<li class="last"><a class="item" href="#"><i class="i8"></i>联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- .nav -->
+</div>
+<!-- header -->
+
+
+<div class="slide-box">
+	<ul class="img-box">
+	  <li style="background:#fff url(../images/golf1.jpg) no-repeat center top">
+	    <div class="text">
+	          <h3>5000平米奢华会所</h3>
+	          <p>拟规划有：标准室内游泳池、温泉SPA、红酒/雪茄吧、读书室、运动健身、艺术展厅、华府图书馆、艺术沙龙馆、会议、客房等完善国际化配套。</p>
+	    </div>
+	  </li>
+	  <li style="background:url(../images/golf2.jpg) no-repeat center top">
+	      <div class="text">
+	            <h3>华府乾街</h3>
+	            <p>3000平米的华府乾街，是燕西华府精心打造的社区商业中心。业主不出社区，即可享受到休闲、购物、美食等一站式消费生活。 </p>
+	      </div>
+	  </li>
+	  <li style="background:#fff url(../images/golf1.jpg) no-repeat center top">
+	    <div class="text">
+	          <h3>燕西私厨餐厅</h3>
+	          <p>聘请专业厨师团队，在华府乾街开设了一间仅为业主和客户提供的定制和上门服务的特色食府。菜系包括谭家官府菜、淮扬菜、川湘菜、特色菜等。菜品不仅讲究色、香、味，更全部选择绿色无公害食材，倡导天然有机、健康养生。</p>
+	    </div>
+	  </li>
+	  <li style="background:#fff url(../images/golf1.jpg) no-repeat center top">
+	    <div class="text">
+	          <h3>中式茶室楼</h3>
+	          <p>不仅为客户提供多种珍贵名茶的泡制、品尝和销售，更还会为宾客讲解茶道文化。</p>
+	    </div>
+	  </li>
+	  <li style="background:#fff url(../images/golf1.jpg) no-repeat center top">
+	    <div class="text">
+	          <h3>社区超市</h3>
+	          <p>24小时便利店，物品种类丰富，品质高端。</p>
+	    </div>
+	  </li>
+	</ul>
+	<a href="#" class="prev"></a>
+	<a href="#" class="next"></a>
+</div>
+
+
+<div class="footer">
+	<div class="ft-bg"></div>
+	<div class="wrap">
+		<div class="qrcode"></div>
+		<div class="contact">
+			服务热线：010 8256 8877<br>
+			现场地址 : 北京市丰台区王佐镇青龙湖公园东500米<br>
+			海淀售楼处地址 : 北京市海淀区万城华府玺园会所
+		</div>
+	</div>
+</div>
+
+
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/slider.js" type="text/javascript"></script>
+<script src="../js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+
+	$('.slider-box').slide({
+	    container: '.img-box',
+	    item: 'li',
+	    trigger: 'li',
+	    auto: true
+	});
+
+    var imgLoad = imagesLoaded( ".slide-box" );
+
+    imgLoad.on("done", function(){
+        $(".img-box").css("backgroundImage","none");
+    })
+})
+</script>
+</body>
+</html>

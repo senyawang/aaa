@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="../css/common.css">
+
+</head>
+<body>
+
+<div class="header">
+	<div class="topline"></div>
+	<h1 class="logo">燕西华府</h1>
+	<span class="hd-tel">销售热线：010-82508877</span>
+	<div class="nav">
+		<div class="wrap">
+			<ul class="nav-list clearfix">
+				<li><a class="item" href="#"><i class="i1"></i>设计理念</a></li>
+				<li><a class="item" href="#"><i class="i2"></i>华府相册</a></li>
+				<li><a class="item" href="#"><i class="i3"></i>人文山水</a></li>
+				<li><a class="item" href="#"><i class="i4"></i>华府生活</a>
+					<div class="sub-item">
+						<a href="#">区域服务</a>
+						<a href="#">高端服务</a>
+						<a href="#">自有服务</a>
+					</div>
+				</li>
+				<li><a class="item" href="#"><i class="i5"></i>新品 跃墅</a></li>
+				<li><a class="item" href="#"><i class="i6"></i>产品中心</a></li>
+				<li><a class="item" href="#"><i class="i7"></i>活动快报</a></li>
+				<li class="last"><a class="item" href="#"><i class="i8"></i>联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- .nav -->
+</div>
+<!-- header -->
+
+
+<div class="slide-box">
+	<ul class="img-box">
+	  <li style="background:#fff url(../images/golf1.jpg) no-repeat center top">
+	    <div class="text">
+	          <h3>“国际红酒城”</h3>
+	          <p>建于青龙湖区域的15000亩高端休闲葡萄酒庄园，将逐步形成以葡萄种植、酿造、窖藏、观光、销售、会展、交易、酒吧消费为一体的产业链，并以此培育包括红酒俱乐部、红酒文化节、红酒博物馆、红酒会展在内的红酒文化。</p>
+	    </div>
+	  </li>
+	  <li style="background:url(../images/golf2.jpg) no-repeat center top">
+	      <div class="text">
+	            <h3>中国汗血马产业园</h3>
+	            <p>以马文化为主题，总规划占地约8000亩，是国内第一个马全产业链综合园区，未来不仅是中国国际马术赛事的中心、中国与世界马业对接的重要平台、马文化的乐园，更是集休闲娱乐、医疗康体、休闲商业、现代体育为一体的高品质休闲度假圣地。 </p>
+	      </div>
+	  </li>
+	</ul>
+	<a href="#" class="prev"></a>
+	<a href="#" class="next"></a>
+</div>
+
+
+<div class="footer">
+	<div class="ft-bg"></div>
+	<div class="wrap">
+		<div class="qrcode"></div>
+		<div class="contact">
+			服务热线：010 8256 8877<br>
+			现场地址 : 北京市丰台区王佐镇青龙湖公园东500米<br>
+			海淀售楼处地址 : 北京市海淀区万城华府玺园会所
+		</div>
+	</div>
+</div>
+
+
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/slider.js" type="text/javascript"></script>
+<script src="../js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+
+	$('.slider-box').slide({
+	    container: '.img-box',
+	    item: 'li',
+	    trigger: 'li',
+	    auto: true
+	});
+
+    var imgLoad = imagesLoaded( ".slide-box" );
+
+    imgLoad.on("done", function(){
+        $(".img-box").css("backgroundImage","none");
+    })
+})
+</script>
+</body>
+</html>

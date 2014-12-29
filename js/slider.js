@@ -68,23 +68,31 @@ $.fn.slide = function(option){
 
     triggerEvent(page);
 
-    if(opts.auto){
+    // if(opts.auto){
 
       autoSlide();
-      $prev.hide();
-      $next.hide();
+      // $prev.hide();
+      // $next.hide();
 
-    }else{
+    // }
 
-      $(document).on('click', opts.prev, function (e) {
-          slidePrev();
-      });
+    $(document).on('mouseover', '.slide-box .next, slide-box .prev', function (e) {
+        clearInterval(autos);
+    }).on('mouseout', '.slide-box .next, slide-box .prev', function (e) {
+        autoSlide();
+    })
 
-      $(document).on('click', opts.nex, function (e) {
-          slideNext();
-      });
+    $(document).on('click', opts.prev, function (e) {
+        e.preventDefault();
+        slidePrev();
+    });
 
-    }
+    $(document).on('click', opts.nex, function (e) {
+        e.preventDefault();
+        slideNext();
+    });
+
+
 
     function triggerEvent(page){
 

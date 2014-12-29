@@ -59,7 +59,6 @@ input:focus, a:focus {
 	height: 140px;
 	text-indent: -9999px;
 	background: url(img/logo.png);
-    border: 5px solid #fff;
     border-width: 0 5px;
 }
 .hd-tel{
@@ -74,7 +73,9 @@ input:focus, a:focus {
 }
 .header .nav{
 	height: 61px;
-	border-top: 1px solid #e8e6e4;
+  margin-bottom: -1px;
+  border-top: 1px solid #e8e6e4;
+	border-bottom: 1px solid #e8e6e4;
 }
 .nav-list li{
 	float: left;
@@ -89,6 +90,7 @@ input:focus, a:focus {
 	display: block;
 	position: relative;
 	height: 61px;
+  color: #606061;
 	font: 500 14px/61px microsoft yahei;
 	padding: 0 25px 0 55px;
 
@@ -97,6 +99,7 @@ input:focus, a:focus {
 	background: none;
 }
 .nav-list li:hover{
+  border-radius: 5px;
 	color: #fff;
 	background: #bf1c2c url(img/nav-bg.png) no-repeat center center;
 }
@@ -145,22 +148,27 @@ input:focus, a:focus {
 .sub-item{
 	display: none;
 	position: absolute;
-	width: 100%;
+	width: 200%;
 	left: 0;
 	top: 100%;
-	background: #be1e2c;
+	/*background: url(img/sub-menu-bg.png) no-repeat center top;*/
+  background: #ca2423;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
 }
-.sub-item a{
-	display: block;
+.nav-list li .sub-item a{
+  display: inline-block;
 	padding: 10px;
 	line-height: 24px;
 	font-size: 13px;
 	text-align: center;
-	border-bottom: 1px solid #ce1f2d;
+  color: #fff!important;
+	/*border-bottom: 1px solid #ce1f2d;*/
 
 }
-.sub-item a:hover{
-	background: #a81e2a;
+.nav-list li .sub-item a:hover{
+  color: #e2e2e2!important;
+	/*background: #a81e2a;*/
 }
 .i1{
 	background: url(img/i1.png);
@@ -185,6 +193,14 @@ input:focus, a:focus {
 }
 .i8{
 	background: url(img/i8.png);
+}
+.nav-list .item i.i-new{
+  width: 23px;
+  height: 16px;
+  left: auto;
+  right: 3px;
+  top: 2px;
+  background: url(img/i-new.png);
 }
 .nav-list li:hover .i1{
 	background: url(img/i1h.png);
@@ -212,9 +228,29 @@ input:focus, a:focus {
 }
 
 
-
-
-
+.pro-list{
+    width: 800px;
+    margin: 140px auto 0;
+    text-align: center;
+}
+.pro-list a{
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    top: 0;
+    -webkit-transition: top .5s;
+    -moz-transition: top .5s;
+    -ms-transition: top .5s;
+    -o-transition: top .5s;
+    transition: top .5s;
+}
+.pro-list a:hover{
+    opacity: 1;
+    filter: alpha(opacity=100);
+    top: -10px;
+}
 
 
 
@@ -287,11 +323,11 @@ input:focus, a:focus {
   margin: 0;
   /*opacity: 0;*/
 }
-.img-box img{
+/*.img-box img{
   position: absolute;
   width: 100%;
   height: 100%;
-}
+}*/
 .slide-box .text{
   position: absolute;
   width: 600px;
@@ -310,28 +346,62 @@ input:focus, a:focus {
   left: 0;
   opacity: 0;
 }
+.slide-box .pic-info{
+  width: 800px;
+  padding: 100px 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.slide-box .pic-info img{
+  float: left;
+  margin-right: 20px;
+}
+.slide-box .pic-info .pic-text{
+  overflow: hidden;
+  margin-left: 440px;
+}
+.pic-text h3{
+  font: 300 34px/2 microsoft yahei;
+}
+.pic-text p{
+  font: 300 14px/2 microsoft yahei;
+}
+.peitao .img-box{
+    background: transparent;
+}
 .slide-box .next,
 .slide-box .prev{
     display: block;
     position: absolute;
     z-index: 2;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     top: 50%;
-    margin-top: -25px;
+    margin-top: -40px;
     left: 50px;
-    background: rgba(0,0,0,.5);
+    border-radius: 50%;
+    background: url(img/btn_prev.png) no-repeat center center;
 }
+
 .slide-box .next{
     left: auto;
     right: 50px;
+    background-image: url(img/btn_next.png);
+}
+
+.peitao .prev{
+    background: url(img/btn_prev.gif) no-repeat center center;
+}
+.peitao .next{
+    background: url(img/btn_next.gif) no-repeat center center;
 }
 .slide-box .text h3{
-  font: 500 44px simsun;
+  top: 0;
+  font: 300 30px microsoft yahei;
 }
 .slide-box .text p{
-  top: 200px;
-  font: 300 14px microsoft yahei;
+  top: 50px;
+  font: 300 14px/1.5 microsoft yahei;
 }
 .img-box .current img{
     -webkit-transform: scale(1.05);
@@ -348,4 +418,9 @@ input:focus, a:focus {
 
 }
 
-.
+
+.index-cont{
+    height: 780px;
+    text-indent: -9999px;
+    overflow: hidden;
+}

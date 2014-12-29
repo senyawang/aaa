@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>title</title>
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
 
 </head>
 <body>
@@ -37,27 +38,37 @@
 <!-- header -->
 
 
-<div class="slide-box">
-	<ul class="img-box">
-	  <li style="background:#fff url(../images/golf1.jpg) no-repeat center top">
-	    <div class="text">
-	          <h3>青龙湖国际文化会都</h3>
-	          <p>投资500亿打造的“青龙湖国际文化会都”，一期工程已经告竣，其主酒店—东方美高美酒店（五星级）和配套公寓已投入试运行，并于2014年5月24日到28日成功承办“世界种子大会”。未来，这里将被打造一个集会议、展览、科技研发、产品交易、节庆、赛事、演艺、旅游休闲为一体的会议会展之都、文化科技之都、时尚娱乐之都、休闲养生之都。</p>
-	    </div>
-	  </li>
-	  <li style="background:url(../images/golf2.jpg) no-repeat center top">
-	      <div class="text">
-	            <h3>十大高尔夫球场</h3>
-	            <p>燕西华府周边坐落着京辉、金泷湖等多达10个高尔夫俱尔部，成为北京最大的果岭聚集部落，驱车15—20分钟均可达到。</p>
-	      </div>
-	  </li>
-	</ul>
-	<a href="#" class="prev"></a>
-	<a href="#" class="next"></a>
+<div class="content">
+	<div class="slide-box peitao">
+		<ul class="img-box">
+		  <li>
+		  	<div class="pic-info">
+		  		<img src="../images/qinglong.jpg" width="400" height="300" alt="">
+		  		<div class="pic-text">
+			          <h3>青龙湖国际文化会都</h3>
+			          <p>投资500亿打造的“青龙湖国际文化会都”，一期工程已经告竣，其主酒店—东方美高美酒店（五星级）和配套公寓已投入试运行，并于2014年5月24日到28日成功承办“世界种子大会”。未来，这里将被打造一个集会议、展览、科技研发、产品交易、节庆、赛事、演艺、旅游休闲为一体的会议会展之都、文化科技之都、时尚娱乐之都、休闲养生之都。</p>
+			    </div>
+		  	</div>
+
+		  </li>
+		  <li>
+		  	<div class="pic-info">
+		  		<img src="../images/yiyuan.jpg" width="400" height="300" alt="">
+		  		<div class="pic-text">
+			          <h3>项目规划</h3>
+			          <p>燕西华府择址青龙湖畔，传承华府系经典赖特建筑的有机自然风格，撰写“城市山水别墅”的华丽篇章。墅区占地面积34万平方米，依北高南低的地势，自然形成“四水归堂”的风水格局，并以1.1的超低容积率和高达30%的绿化率，打造京城高品质低密住区标杆。</p>
+			    </div>
+		  	</div>
+
+		  </li>
+		</ul>
+		<a href="#" class="prev"></a>
+		<a href="#" class="next"></a>
+	</div>
 </div>
 
 
-<div class="footer">
+<div class="footer sub-footer">
 	<div class="ft-bg"></div>
 	<div class="wrap">
 		<div class="qrcode"></div>
@@ -80,7 +91,7 @@ $(document).ready(function(){
 	    container: '.img-box',
 	    item: 'li',
 	    trigger: 'li',
-	    auto: true
+	    auto: false
 	});
 
     var imgLoad = imagesLoaded( ".slide-box" );

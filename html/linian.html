@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="../css/common.css">
+
+</head>
+<body>
+
+<div class="header">
+	<div class="topline"></div>
+	<h1 class="logo">燕西华府</h1>
+	<span class="hd-tel">销售热线：010-82508877</span>
+	<div class="nav">
+		<div class="wrap">
+			<ul class="nav-list clearfix">
+				<li><a class="item" href="#"><i class="i1"></i>设计理念</a></li>
+				<li><a class="item" href="#"><i class="i2"></i>华府相册</a></li>
+				<li><a class="item" href="#"><i class="i3"></i>人文山水</a></li>
+				<li><a class="item" href="#"><i class="i4"></i>华府生活</a>
+					<div class="sub-item">
+						<a href="#">区域服务</a>
+						<a href="#">高端服务</a>
+						<a href="#">自有服务</a>
+					</div>
+				</li>
+				<li><a class="item" href="#"><i class="i5"></i>新品 跃墅</a></li>
+				<li><a class="item" href="#"><i class="i6"></i>产品中心</a></li>
+				<li><a class="item" href="#"><i class="i7"></i>活动快报</a></li>
+				<li class="last"><a class="item" href="#"><i class="i8"></i>联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- .nav -->
+</div>
+<!-- header -->
+
+
+<div class="slide-box">
+	<ul class="img-box">
+	  <li style="background:#fff url(../images/jianzhu.jpg) no-repeat center top">
+	    <div class="text">
+	          <h3>项目规划</h3>
+	          <p>燕西华府择址青龙湖畔，传承华府系经典赖特建筑的有机自然风格，撰写“城市山水别墅”的华丽篇章。墅区占地面积34万平方米，依北高南低的地势，自然形成“四水归堂”的风水格局，并以1.1的超低容积率和高达30%的绿化率，打造京城高品质低密住区标杆。</p>
+	    </div>
+	  </li>
+	  <li style="background:url(../images/golf2.jpg) no-repeat center top">
+	      <div class="text">
+	            <h3>建筑风格</h3>
+	            <p>燕西华府以大小独栋、双拼、联排等全系产品，成就京西纯墅住区，并不惜增加造价，创造性打造2.4米飞檐、3层挑檐的大坡屋顶，择取采用“荔枝面”工艺的珍贵石材、巴西啡钻麻和宜光陶土砖，衬托出对语西山的华贵气质。</p>
+	      </div>
+	  </li>
+	  <li style="background:#fff url(../images/golf1.jpg) no-repeat center top">
+	    <div class="text">
+	          <h3>园林设计理念</h3>
+	          <p>聘请国际三大园林景观大师之一的户田芳树先生，探求道法自然精神，打造浑然天成东方禅境园林。园区充分运用湖、林、溪、谷等自然元素，以水为脉，引水绕宅，营造出“四水归堂”的风水格局，并通过人工手法，创造四季不结冰的水系景观。园内绿植丰盛葱茏，银杏、元杉、紫薇等30余种珍贵树种，以及3500余株的原生树，为生态、健康的居住环境提供呵护。</p>
+	    </div>
+	  </li>
+	</ul>
+	<a href="#" class="prev"></a>
+	<a href="#" class="next"></a>
+</div>
+
+
+<div class="footer">
+	<div class="ft-bg"></div>
+	<div class="wrap">
+		<div class="qrcode"></div>
+		<div class="contact">
+			服务热线：010 8256 8877<br>
+			现场地址 : 北京市丰台区王佐镇青龙湖公园东500米<br>
+			海淀售楼处地址 : 北京市海淀区万城华府玺园会所
+		</div>
+	</div>
+</div>
+
+
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/slider.js" type="text/javascript"></script>
+<script src="../js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+
+	$('.slider-box').slide({
+	    container: '.img-box',
+	    item: 'li',
+	    trigger: 'li',
+	    auto: true
+	});
+
+    var imgLoad = imagesLoaded( ".slide-box" );
+
+    imgLoad.on("done", function(){
+        $(".img-box").css("backgroundImage","none");
+    })
+})
+</script>
+</body>
+</html>
