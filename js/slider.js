@@ -68,13 +68,13 @@ $.fn.slide = function(option){
 
     triggerEvent(page);
 
-    // if(opts.auto){
+    if(opts.auto){
 
       autoSlide();
       // $prev.hide();
       // $next.hide();
 
-    // }
+    }
 
     $(document).on('mouseover', '.slide-box .next, slide-box .prev', function (e) {
         clearInterval(autos);

@@ -124,6 +124,9 @@
     font-size: 350px;
     text-align: center;
 }
+.connected-carousels .carousel-stage li{
+    vertical-align: middle;
+}
 /** Navigation carousel specific styles **/
 .connected-carousels .carousel-navigation,
 .connected-carousels .carousel-navigation-comment {
