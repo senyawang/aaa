@@ -1,4 +1,4 @@
-  $(function () {
+$(function () {
 
 $.fn.slide = function(option){
 
@@ -16,7 +16,7 @@ $.fn.slide = function(option){
 
         auto: false,
 
-        duration: 6000
+        duration: 8000
       },
 
       opts = $.extend(options, option),
@@ -56,25 +56,31 @@ $.fn.slide = function(option){
     var wh = $("body").height(),
         hh = $(".header").height();
 
-    if(wh > 800){
-        $item.height("800px");
-        $container.height("800px");
-    }else{
-        $item.height("550px");
-        $container.height("550px");
+
+    if(!$('.peitao').length){
+        if(wh > 800){
+          $item.height("800px");
+          $container.height("800px");
+      }else{
+          $item.height("550px");
+          $container.height("550px");
+      }
     }
+
+    
     // $item.height(wh-hh);
     // $container.height(wh-hh);
 
     triggerEvent(page);
 
-    // if(opts.auto){
+    if(opts.auto){
 
-      autoSlide();
+      setTimeout(autoSlide, 5000)
+      // autoSlide();
       // $prev.hide();
       // $next.hide();
 
-    // }
+    }
 
     $(document).on('mouseover', '.slide-box .next, slide-box .prev', function (e) {
         clearInterval(autos);
@@ -82,14 +88,19 @@ $.fn.slide = function(option){
         autoSlide();
     })
 
+    var flag;
+
     $(document).on('click', opts.prev, function (e) {
         e.preventDefault();
-        slidePrev();
+        flag&&slidePrev();
+        flag=false;
     });
 
     $(document).on('click', opts.nex, function (e) {
         e.preventDefault();
-        slideNext();
+        flag&&slideNext();
+        flag=false;
+
     });
 
 
@@ -102,35 +113,29 @@ $.fn.slide = function(option){
         .clearQueue()
         .stop()
         .eq(page)
-        .animate({
-            opacity: 1
-        }, 500, "swing", function () {
+        .fadeIn( 1000, function(){
+          $(this).find('h3').animate({
+            opacity: 1,
+            top: 0
+          }, 1000, "swing", function () {
 
-            $(this).find('h3').animate({
+          });
+
+          $(this).find('p').animate({
               opacity: 1,
-              top: 0
-            }, 1000, "swing", function () {
-
+              top: "50px"
+            }, 2000, "swing", function () {
+                flag=true;
             });
-
-            $(this).find('p').animate({
-                opacity: 1,
-                top: "50px"
-              }, 2000, "swing", function () {
-                // body...
-              });
 
         });
 
-      lastThis && lastThis.animate({
-          opacity: 0
-      }, 500, "swing", function () {
+      lastThis && lastThis.fadeOut( 500, function(){
 
           $(this).removeClass('current');
           $(this).find('h3,p').removeAttr("style");
 
-      });
-
+        });
 
 
 
@@ -167,14 +172,18 @@ $.fn.slide = function(option){
         triggerEvent(page);
     }
 
-    function slidePrev () {
+    function slidePrev () {console.log(page)
 
         if(page == 0){
           page = $item.length-1;
         }else{
           page --;
-        }
+        }console.log(page)
         triggerEvent(page);
     }
 
 }
+
+
+
+});
