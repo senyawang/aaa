@@ -1,4 +1,4 @@
-$(function () {
+  $(function () {
 
 $.fn.slide = function(option){
 
@@ -102,29 +102,35 @@ $.fn.slide = function(option){
         .clearQueue()
         .stop()
         .eq(page)
-        .fadeIn( 1000, function(){
-          $(this).find('h3').animate({
-            opacity: 1,
-            top: 0
-          }, 1000, "swing", function () {
+        .animate({
+            opacity: 1
+        }, 500, "swing", function () {
 
-          });
-
-          $(this).find('p').animate({
+            $(this).find('h3').animate({
               opacity: 1,
-              top: "50px"
-            }, 2000, "swing", function () {
-              // body...
+              top: 0
+            }, 1000, "swing", function () {
+
             });
+
+            $(this).find('p').animate({
+                opacity: 1,
+                top: "50px"
+              }, 2000, "swing", function () {
+                // body...
+              });
 
         });
 
-      lastThis && lastThis.fadeOut( 500, function(){
+      lastThis && lastThis.animate({
+          opacity: 0
+      }, 500, "swing", function () {
 
           $(this).removeClass('current');
           $(this).find('h3,p').removeAttr("style");
 
-        });
+      });
+
 
 
 
@@ -161,18 +167,14 @@ $.fn.slide = function(option){
         triggerEvent(page);
     }
 
-    function slidePrev () {console.log(page)
+    function slidePrev () {
 
         if(page == 0){
           page = $item.length-1;
         }else{
           page --;
-        }console.log(page)
+        }
         triggerEvent(page);
     }
 
 }
-
-
-
-});
