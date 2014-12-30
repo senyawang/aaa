@@ -61,6 +61,10 @@ input:focus, a:focus {
 	background: url(img/logo.png);
     border-width: 0 5px;
 }
+.header .logo a{
+	display: block;
+	height: 100%;
+}
 .hd-tel{
 	position: absolute;
 	width: 169px;
@@ -332,7 +336,7 @@ input:focus, a:focus {
 .slide-box .text{
   position: absolute;
   width: 640px;
-  padding: 20px 30px;
+  padding: 10px 30px 20px;
   /*height: 300px;*/
   top: 50%;
   margin-top: -100px;
@@ -407,14 +411,14 @@ input:focus, a:focus {
     height: 80px;
     top: 50%;
     margin-top: -40px;
-    left: 50px;
+    left: 180px;
     border-radius: 50%;
     background: url(img/btn_prev.png) no-repeat center center;
 }
 
 .slide-box .next{
     left: auto;
-    right: 50px;
+    right: 180px;
     background-image: url(img/btn_next.png);
 }
 
