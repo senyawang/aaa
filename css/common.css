@@ -61,6 +61,10 @@ input:focus, a:focus {
 	background: url(img/logo.png);
     border-width: 0 5px;
 }
+.header .logo a{
+	display: block;
+	height: 100%;
+}
 .hd-tel{
 	position: absolute;
 	width: 169px;
@@ -131,6 +135,7 @@ input:focus, a:focus {
 }
 .nav-list{
     height: 46px;
+    /*overflow: hidden;*/
 }
 .nav-list .item{
     height: 46px;
@@ -330,21 +335,49 @@ input:focus, a:focus {
 }*/
 .slide-box .text{
   position: absolute;
-  width: 600px;
-  height: 300px;
-  bottom: 0px;
+  width: 640px;
+  padding: 10px 30px 20px;
+  /*height: 300px;*/
+  top: 50%;
+  margin-top: -100px;
   z-index: 2;
   left: 50%;
-  margin-left: -250px;
+  margin-left: -370px;
   color: #fff;
   font-family: microsoft yahei;
+  background: url(img/bk.png) no-repeat center top;
 }
 .slide-box .text h3,
 .slide-box .text p{
-  position: absolute;
+  /*position: absolute;*/
   top: 100px;
   left: 0;
   opacity: 0;
+}
+.slide-box .text h3{
+	width: 100%;
+	text-align: center;
+  top: 0;
+  font: 300 30px/2 microsoft yahei;
+}
+.slide-box .text p{
+	text-indent: 2em;
+  top: 50px;
+  font: 300 14px/1.5 microsoft yahei;
+}
+.img-box .current img{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+
+    -webkit-transition: transform 8s;
+    -moz-transition: transform 8s;
+    -ms-transition: transform 8s;
+    -o-transition: transform 8s;
+    transition: transform 8s;
+
 }
 .slide-box .pic-info{
   width: 800px;
@@ -378,14 +411,14 @@ input:focus, a:focus {
     height: 80px;
     top: 50%;
     margin-top: -40px;
-    left: 50px;
+    left: 180px;
     border-radius: 50%;
     background: url(img/btn_prev.png) no-repeat center center;
 }
 
 .slide-box .next{
     left: auto;
-    right: 50px;
+    right: 180px;
     background-image: url(img/btn_next.png);
 }
 
@@ -394,28 +427,6 @@ input:focus, a:focus {
 }
 .peitao .next{
     background: url(img/btn_next.gif) no-repeat center center;
-}
-.slide-box .text h3{
-  top: 0;
-  font: 300 30px microsoft yahei;
-}
-.slide-box .text p{
-  top: 50px;
-  font: 300 14px/1.5 microsoft yahei;
-}
-.img-box .current img{
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    transform: scale(1.05);
-
-    -webkit-transition: transform 8s;
-    -moz-transition: transform 8s;
-    -ms-transition: transform 8s;
-    -o-transition: transform 8s;
-    transition: transform 8s;
-
 }
 
 
