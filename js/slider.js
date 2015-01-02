@@ -84,8 +84,11 @@ $.fn.slide = function(option){
 
     $(document).on('mouseover', '.slide-box .next, slide-box .prev', function (e) {
         clearInterval(autos);
+        console.log(1)
     }).on('mouseout', '.slide-box .next, slide-box .prev', function (e) {
         autoSlide();
+        console.log(2)
+
     })
 
     var flag;
@@ -172,13 +175,13 @@ $.fn.slide = function(option){
         triggerEvent(page);
     }
 
-    function slidePrev () {console.log(page)
+    function slidePrev () {
 
         if(page == 0){
           page = $item.length-1;
         }else{
           page --;
-        }console.log(page)
+        }
         triggerEvent(page);
     }
 
