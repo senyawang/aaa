@@ -296,7 +296,7 @@ input:focus, a:focus {
 	margin-right: 20px;
 }
 .footer .contact{
-	padding-top: 20px;
+	padding-top: 30px;
 	color: #fff;
 	font: 500 14px/24px microsoft yahei;
 }
@@ -342,7 +342,7 @@ input:focus, a:focus {
   margin-top: -100px;
   z-index: 2;
   left: 50%;
-  margin-left: -370px;
+  margin-left: -350px;
   color: #fff;
   font-family: microsoft yahei;
   background: url(img/bk.png) no-repeat center top;
