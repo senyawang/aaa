@@ -187,3 +187,10 @@ $.fn.slide = function(option){
 
 
 });
+$(function(){
+  $(".side ul a").hover(function(){
+    $(this).stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#ae1c1c"})
+  },function(){
+    $(this).stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})
+  });
+});
