@@ -16,7 +16,7 @@ $.fn.slide = function(option){
 
         auto: false,
 
-        duration: 8000
+        duration: 10000
       },
 
       opts = $.extend(options, option),
@@ -71,27 +71,22 @@ $.fn.slide = function(option){
     // $item.height(wh-hh);
     // $container.height(wh-hh);
 
-    triggerEvent(page);
+
 
     if(opts.auto){
 
-      setTimeout(autoSlide, 5000)
+      triggerEvent(page)
       // autoSlide();
       // $prev.hide();
       // $next.hide();
 
     }
 
-    $(document).on('mouseover', '.slide-box .next, slide-box .prev', function (e) {
-        clearInterval(autos);
-    }).on('mouseout', '.slide-box .next, slide-box .prev', function (e) {
-        autoSlide();
-    })
-
-    var flag;
+    var flag = true;
 
     $(document).on('click', opts.prev, function (e) {
         e.preventDefault();
+
         flag&&slidePrev();
         flag=false;
     });
@@ -107,37 +102,45 @@ $.fn.slide = function(option){
 
     function triggerEvent(page){
 
-      $trigger.eq(page).addClass('current');
+      clearInterval(autos);
+      console.info('a--' + autos)
+
+      // $trigger.eq(page).css('display',"block");
 
       $item
-        .clearQueue()
-        .stop()
         .eq(page)
-        .fadeIn( 1000, function(){
+        .stop()
+        .animate({
+            opacity: 1
+        }, 1000, function(){
+
           $(this).find('h3').animate({
             opacity: 1,
             top: 0
-          }, 1000, "swing", function () {
+          }, 500, "swing", function () {
 
           });
 
           $(this).find('p').animate({
               opacity: 1,
               top: "50px"
-            }, 2000, "swing", function () {
+            }, 1000, "swing", function () {
                 flag=true;
+
+                autoSlide();
+
             });
 
         });
 
-      lastThis && lastThis.fadeOut( 500, function(){
+      lastThis && lastThis.stop().animate({
+            opacity: 0
+        }, function(){
 
-          $(this).removeClass('current');
+          // $(this).css('display', "none");
           $(this).find('h3,p').removeAttr("style");
 
         });
-
-
 
       lastThis = $item.eq(page);
     }
@@ -151,16 +154,18 @@ $.fn.slide = function(option){
 
           page ++;
 
-          triggerEvent(page);
-
         }else{
 
           page = 0;
 
-          triggerEvent(page);
-
         }
+
+        console.info('auto')
+
+        triggerEvent(page);
+
       }, opts.duration);
+      console.info('b---' + autos)
     }
 
     function slideNext () {
@@ -172,13 +177,13 @@ $.fn.slide = function(option){
         triggerEvent(page);
     }
 
-    function slidePrev () {console.log(page)
+    function slidePrev () {
 
         if(page == 0){
           page = $item.length-1;
         }else{
           page --;
-        }console.log(page)
+        }
         triggerEvent(page);
     }
 
