@@ -38,21 +38,6 @@ $.fn.slide = function(option){
     var autos;
 
 
-
-    // $(document).on('click', opts.trigger, function(e){
-
-    //   e.preventDefault();
-
-    //   if(page !== $(this).index()){
-
-    //     page = $(this).index();
-
-    //     triggerEvent(page);
-
-    //   }
-
-    // });
-
     var wh = $("body").height(),
         hh = $(".header").height();
 
@@ -82,7 +67,9 @@ $.fn.slide = function(option){
 
     }
 
+
     var flag = true;
+
 
     $(document).on('click', opts.prev, function (e) {
         e.preventDefault();
@@ -103,7 +90,7 @@ $.fn.slide = function(option){
     function triggerEvent(page){
 
       clearInterval(autos);
-      console.info('a--' + autos)
+      // console.info('a--' + autos)
 
       // $trigger.eq(page).css('display',"block");
 
@@ -165,7 +152,7 @@ $.fn.slide = function(option){
         triggerEvent(page);
 
       }, opts.duration);
-      console.info('b---' + autos)
+      // console.info('b---' + autos)
     }
 
     function slideNext () {

@@ -282,12 +282,14 @@
     margin-right: auto;
 }
 .news-detail{
+    overflow: hidden;
     padding: 30px;
     line-height: 30px;
     font-size: 14px;
     text-align: center;
 }
 .news-detail img{
+  max-width: 700px;
     margin-bottom: 20px;
 }
 .news-detail h1{
@@ -479,17 +481,19 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #000;
-  opacity: .1;
-  filter: alpha(opacity=10);
+  background: #fff;
+  opacity: .8;
+  filter: alpha(opacity=80);
 }
 .hide-text h3{
-  color: #444;
+  position: relative;
+  color: #333;
   padding: 0 20px;
   font: 500 15px/30px microsoft yahei;
 }
 .hide-text p{
-  color: #888;
+  position: relative;
+  color: #666;
   padding: 0 20px;
   font: 500 12px/20px microsoft yahei;
 }
