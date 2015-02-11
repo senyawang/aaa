@@ -327,6 +327,7 @@ input:focus, a:focus {
   height: 600px;
   margin: 0;
   opacity: 0;
+  background-size: 100% auto!important;
 }
 /*.img-box img{
   position: absolute;
@@ -434,6 +435,7 @@ input:focus, a:focus {
     height: 780px;
     text-indent: -9999px;
     overflow: hidden;
+    /*background-size: 100% auto!important;*/
 }
 
 
